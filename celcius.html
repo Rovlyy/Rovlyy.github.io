@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Celsius to Fahrenheit Converter</h2>
+
+    <label for="celsius">Enter Celsius temperature:</label>
+    <input type="number" id="celsius" placeholder="Enter temperature" oninput="convertTemperature()">
+
+    <p id="result">Fahrenheit temperature will appear here.</p>
+
+    <script>
+        function convertTemperature() {
+            // Ambil nilai dari input Celsius
+            var celsiusInput = document.getElementById("celsius").value;
+
+            // Ubah nilai ke Fahrenheit
+            var fahrenheitOutput = (celsiusInput * 9/5) + 32;
+
+            // Tampilkan hasil pada elemen dengan id "result"
+            document.getElementById("result").innerHTML = celsiusInput + " Celsius is equal to " + fahrenheitOutput + " Fahrenheit.";
+        }
+    </script>
+
+</body>
+</html>
